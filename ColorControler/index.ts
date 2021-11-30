@@ -55,6 +55,11 @@ export class ColorControler implements ComponentFramework.StandardControl<IInput
 		this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "");
 		this.divElement.style.backgroundColor = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "white"; 
 		this.divElement.innerHTML = this.divElement.style.backgroundColor;
+		
+		// Try to check these two:
+		// context.mode.isControlDisabled
+		// context.mode.isVisible
+		// What happens if in CRM I put my control as readonly? :)
 
 	}
 
